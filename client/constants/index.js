@@ -1,0 +1,151 @@
+export const categories = [
+  {
+    id: 1,
+    name: "Pizza",
+    image: require("../assets/images/categories/pizza.png"),
+  },
+  {
+    id: 2,
+    name: "Burger",
+    image: require("../assets/images/categories/hanburger.png"),
+  },
+  {
+    id: 3,
+    name: "Fish",
+    image: require("../assets/images/categories/fish.png"),
+  },
+  {
+    id: 4,
+    name: "Spagheti",
+    image: require("../assets/images/categories/spagheti.png"),
+  },
+  {
+    id: 5,
+    name: "TakeOut Box",
+    image: require("../assets/images/categories/takeoutbox.png"),
+  },
+  {
+    id: 6,
+    name: "Drink",
+    image: require("../assets/images/categories/drink.png"),
+  },
+  {
+    id: 7,
+    name: "CupCake",
+    image: require("../assets/images/categories/cupcake.png"),
+  },
+];
+
+export const featured = {
+  id: 1,
+  title: "Hot and Spicy",
+  description: "Get the best spicy food in town, soft and juicy fried chicken",
+  restaurants: [
+    {
+      id: 1,
+      name: "Papa Jhons",
+      image: require("../assets/images/restaurants/matka.jpg"),
+      description: "hot and spicy spicy chicken",
+      lng: 38.2145602,
+      lat: -85.5324269,
+      address: "434 second street",
+      stars: 4,
+      reviews: "4.4k",
+      category: "Pizza",
+      dishes: [
+        {
+          id: 1,
+          name: "Spicy Chicken",
+          price: 12.99,
+          image: require("../assets/images/dishes/chicken.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+        {
+          id: 2,
+          name: "Spicy Burger",
+          price: 8.99,
+          image: require("../assets/images/dishes/burger.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+        {
+          id: 3,
+          name: "Spicy Pizza",
+          price: 15.99,
+          image: require("../assets/images/dishes/pizza.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Papa Jhons",
+      image: require("../assets/images/restaurants/papajohns.jpg"),
+      description: "hot and spicy spicy chicken",
+      lng: 38.2145602,
+      lat: -85.5324269,
+      address: "434 second street",
+      stars: 4,
+      reviews: "4.4k",
+      category: "Pizza",
+      dishes: [
+        {
+          id: 1,
+          name: "Spicy Chicken",
+          description: "hot and spicy spicy chicken",
+
+          price: 12.99,
+          image: require("../assets/images/dishes/chicken.jpeg"),
+        },
+        {
+          id: 2,
+          name: "Spicy Burger",
+          price: 8.99,
+          image: require("../assets/images/dishes/burger.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+        {
+          id: 3,
+          name: "Spicy Pizza",
+          price: 15.99,
+          image: require("../assets/images/dishes/pizza.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Papa Jhons",
+      image: require("../assets/images/restaurants/papajohns.jpg"),
+      description: "hot and spicy spicy chicken",
+      lng: 38.2145602,
+      lat: -85.5324269,
+      address: "434 second street",
+      stars: 4,
+      reviews: "4.4k",
+      category: "Pizza",
+      dishes: [
+        {
+          id: 1,
+          name: "Spicy Chicken",
+          price: 12.99,
+          image: require("../assets/images/dishes/chicken.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+        {
+          id: 2,
+          name: "Spicy Burger",
+          price: 8.99,
+          image: require("../assets/images/dishes/burger.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+        {
+          id: 3,
+          name: "Spicy Pizza",
+          price: 15.99,
+          image: require("../assets/images/dishes/pizza.jpeg"),
+          description: "hot and spicy spicy chicken",
+        },
+      ],
+    },
+  ],
+};
