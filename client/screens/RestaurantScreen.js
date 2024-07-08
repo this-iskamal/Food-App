@@ -7,19 +7,26 @@ import {
   StatusBar,
   Platform,
 } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
 import DishRow from "../components/DishRow";
 import CartIcon from "../components/CartIcon";
+import { useDispatch } from "react-redux";
+import { setRestaurant } from "../slices/restaurantSlice";
 
 const RestaurantScreen = () => {
   const { params } = useRoute();
   const navigation = useNavigation();
-  let item = params;
+  const item = params;
+  const dispatch = useDispatch();
 
- 
+  useEffect(() => {
+    if (item && item.id) {
+      dispatch(setRestaurant({ ...item }));
+    }
+  }, []);
 
   return (
     <View>
@@ -65,7 +72,7 @@ const RestaurantScreen = () => {
             <Text className="text-gray-500 mt-2">{item.description}</Text>
           </View>
         </View>
-        <View className="pb-2 bg-white">
+        <View className="pb-16 bg-white">
           <Text className="p-4 text-2xl font-bold">Menu</Text>
           {/* dishes */}
           {item.dishes.map((dish, index) => (

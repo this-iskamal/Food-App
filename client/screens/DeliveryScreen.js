@@ -5,10 +5,19 @@ import { useNavigation } from "@react-navigation/native";
 import MapView, { Marker } from "react-native-maps";
 import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
+import { useDispatch, useSelector } from "react-redux";
+import { selectRestaurant } from "../slices/restaurantSlice";
+import { emptyCart } from "../slices/cartSlice";
 
 const DeliveryScreen = () => {
-  const restaurant = featured.restaurants[0];
+  const restaurant = useSelector(selectRestaurant);
   const navigation = useNavigation();
+  const dispatch = useDispatch();
+
+  const handlecancelbutton = () => {
+    navigation.navigate("Home");
+    dispatch(emptyCart());
+  };
   return (
     <View className="flex-1 ">
       <MapView
@@ -69,10 +78,17 @@ const DeliveryScreen = () => {
           </View>
           <View className="flex-row items-center space-x-3 mr-3">
             <TouchableOpacity className="bg-white p-2 rounded-full">
-                <Icon.Phone fill={themeColors.bgColor(1)} strokeWidth={1} stroke={themeColors.bgColor(1)} />
+              <Icon.Phone
+                fill={themeColors.bgColor(1)}
+                strokeWidth={1}
+                stroke={themeColors.bgColor(1)}
+              />
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>navigation.navigate('Home')} className="bg-white p-2 rounded-full">
-                <Icon.X strokeWidth={4} stroke="red"/>
+            <TouchableOpacity
+              onPress={handlecancelbutton}
+              className="bg-white p-2 rounded-full"
+            >
+              <Icon.X strokeWidth={4} stroke="red" />
             </TouchableOpacity>
           </View>
         </View>
